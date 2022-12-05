@@ -1,0 +1,101 @@
+Make a directory under your home directory called documents. Next, make a directory
+under the documents directory called spreadsheets. What is the absolute path
+for the spreadsheets directory?
+
+Answer 1: 
+
+{gurmansingh@localhost ~}$ cd
+{gurmansingh@localhost ~}$ mkdir documents
+{gurmansingh@localhost documents}$ cd documents
+{gurmansingh@localhost documents}$ mkdir spreadsheets
+
+Absolute Path: /home/gurmansingh/documents/spreadsheets
+
+Use the cat command to create a two-line file in your home directory called datainfo.
+On the first line, enter 144, and on the second line, enter 288. After the file is created,
+copy it from your home directory to the spreadsheets directory you created.
+
+Answer 2:
+
+{gurmansingh@localhost ~}$ cd 
+{gurmansingh@localhost ~}$ cat>datainfo
+144
+288
+ctrl+d
+{gurmansingh@localhost ~}$ cp datatinfo ~/documents/spreadsheets 
+
+Set the permissions on the datainfo file so that the owner, group, and others can read and execute the file. (Otherwise, leave the default settings as is.)
+
+Answer 3:
+
+{gurmansingh@localhost ~}$ chmod ugo+rx ~/documents/spreadsheets
+
+Append the current month’s calendar to the datainfo file that is in your home
+directory. Next, copy your changed datainfo file over the older datainfo file in the
+spreadsheets directory, but use the copy option that prompts you before you overwrite
+the file in the spreadsheets directory. Check the contents of the datainfo file in
+the spreadsheets directory to make certain your copy was successful.
+
+Answer 4: 
+
+{gurmansingh@localhost ~}$ cd 
+{gurmansingh@localhost ~}$ cal>>datainfo 
+{gurmansingh@localhost ~}$ cp -i datainfo ~/documents/spreadsheets 
+
+Make the spreadsheets directory your working directory. Make copies of the datainfo
+file in the spreadsheets directory, so that one copy is named myinfo and one is
+named datadata. Next, use  a wildcard character combination to list all files that have “ata” as the second, third, and fourth characters.
+
+Answer 5: 
+
+{gurmansingh@localhost ~}$ cd documents
+{gurmansingh@localhost documents}$ cd spreadsheets
+{gurmansingh@localhost spreadsheets}$ cp datainfo myinfo
+{gurmansingh@localhost spreadsheets}$ cp datainfo datadata
+{gurmansingh@localhost sppreadsheets}$ ls 
+{gurmansingh@localhost spreadsheets}$ ls info 
+{gurmansingh@localhost spreadsheets}$ ls ?ata*
+
+Make certain you are in your home directory. Change your command prompt so
+that it shows your current working directory with an exclamation point, such as
+mydirectory! 
+
+Answer 6:
+
+{gurmansingh@localhost spreadsheets}$ PS1="\w"!
+~/documents/spreadsheets! cd documents
+~/documents! cd spreadsheets
+~! cd ..
+
+Change to your home directory. Use the rmdir command to delete the spreadsheets
+directory. What happens?
+
+Answer 7: 
+
+Error message, directory not empty.
+
+Delete the datainfo files in both your home directory and in the spreadsheets
+directory. Also, delete the myinfo and datadata files in the spreadsheets directory.
+
+Answer 8: 
+
+{gurmansingh@localhost ~}$ rm ~/documents/spreadsheets/datainfo
+{gurmansingh@localhost ~}$ rm datainfo
+
+Change to your home directory. Delete the spreadsheets directory and then delete
+the documents directory.
+
+Answer 9: 
+
+{gurmansingh@localhost ~}$ cd
+{gurmansingh@localhost ~}$ rmdir ~/documents/spreadsheets
+{gurmansingh@localhost ~}$ rmdir documents
+
+Create a directory called secure under your home directory. Next, using the octal
+permission format, set security on the secure directory so that you have all permissions
+and no one else has any permissions.
+
+Answer 10:
+
+{gurmansingh@localhost ~}$ mkdir secure
+{gurmansingh@localhost ~}$ chmod 700 secure
